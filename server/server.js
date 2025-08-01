@@ -15,7 +15,7 @@ app.use(cors({
 }));
 
 
-app.get("/", (req, res) => {
+app.get("/welcome", (req, res) => {
   res.status(200).json({
     success: true,
     message: "Welcome to Crypto Tracker App"
