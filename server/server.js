@@ -28,7 +28,7 @@ connectToDBHandler()
   .then(() => {
     app.listen(dotenvData.PORT, () => {
       console.log('✅ Server running on port', dotenvData.PORT);
-      startCron();
+      // startCron();
     });
   })
   .catch((err) => {
