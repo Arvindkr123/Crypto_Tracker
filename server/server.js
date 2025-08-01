@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: config.CLIENT_WEBAPP_URL,
+  origin: [config.CLIENT_WEBAPP_URL, "http://localhost:5173"],
   credentials: true
 }));
 
@@ -25,9 +25,7 @@ app.get("/", (req, res) => {
 // API routes
 app.use("/api", router);
 
-// --- For Local Development ---
-if (process.env.VERCEL !== "1") {
-  connectToDBHandler()
+connectToDBHandler()
     .then(() => {
       app.listen(config.PORT, () => {
         console.log(`✅ Server running on http://localhost:${config.PORT}`);
@@ -37,7 +35,6 @@ if (process.env.VERCEL !== "1") {
     .catch((err) => {
       console.error("❌ DB connection failed:", err);
     });
-}
 
 // --- For Vercel (Serverless) ---
 export default app;
