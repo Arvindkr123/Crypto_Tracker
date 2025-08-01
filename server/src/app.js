@@ -12,6 +12,13 @@ app.use(cors({
   credentials: true
 }));
 
+app.use("/welcome", (req, res) => {
+  res.send(200).json({
+    success: true,
+    message: 'Welcome to Crypto Tracker App'
+  })
+})
+
 app.use("/api", router)
 
 export default app;
