@@ -14,8 +14,8 @@ app.use(cors({
   credentials: true
 }));
 
-// Welcome route
-app.get("/welcome", (req, res) => {
+
+app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
     message: "Welcome to Crypto Tracker App"
@@ -31,7 +31,7 @@ if (process.env.VERCEL !== "1") {
     .then(() => {
       app.listen(config.PORT, () => {
         console.log(`✅ Server running on http://localhost:${config.PORT}`);
-        // startCron(); // enable if you want cron jobs locally
+        startCron(); // enable if you want cron jobs locally
       });
     })
     .catch((err) => {
