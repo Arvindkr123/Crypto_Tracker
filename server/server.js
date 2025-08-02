@@ -10,9 +10,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: [config.CLIENT_WEBAPP_URL, "http://localhost:5173"],
+  origin: [
+    "https://crypto-tracker-natt.vercel.app", // full domain only
+    "http://localhost:5173"
+  ],
   credentials: true
 }));
+
 
 
 app.get("/welcome", (req, res) => {
