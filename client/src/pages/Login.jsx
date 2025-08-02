@@ -62,7 +62,7 @@ const Login = () => {
         <img
           src="https://imgs.search.brave.com/GlGG2wMA_reePXojyPkekGPlvUWuhkFf3G_ZnOnRJHU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/OC8xNS8wOC81My9i/aXRjb2luLTI2NDMx/NTlfNjQwLmpwZw"
           alt="Crypto"
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
       </div>
 

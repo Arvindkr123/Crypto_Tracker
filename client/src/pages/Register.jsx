@@ -75,7 +75,7 @@ const Register = () => {
         <img
           src="https://imgs.search.brave.com/QkgoXK4YEZVjAi7c_2SKfR5Y81tkd0-GOsSSfu8os3w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jcnlw/dG9jdXJyZW5jeS13/b21hbi1ob2xkaW5n/LXNwZWVjaC1idWJi/bGUteW91bmctMTA4/NDkzMjkwLmpwZw"
           alt="Crypto"
-          className="w-full h-full object-cover"
+          className="w-full h-full"
         />
       </div>
 
