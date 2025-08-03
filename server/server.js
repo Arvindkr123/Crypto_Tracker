@@ -26,14 +26,13 @@ app.get("/welcome", (req, res) => {
   });
 });
 
-// API routes
 app.use("/api", router);
 
 connectToDBHandler()
     .then(() => {
       app.listen(config.PORT, () => {
         console.log(`✅ Server running on http://localhost:${config.PORT}`);
-        startCron(); // enable if you want cron jobs locally
+        startCron();
       });
     })
     .catch((err) => {
