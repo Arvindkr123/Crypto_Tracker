@@ -3,7 +3,7 @@ import axios from 'axios';
 import config from '../config/config.js';
 
 export const startCron = () => {
-  cron.schedule('* * * * *', async () => {
+  cron.schedule('0 * * * *', async () => {
     try {
       await axios.post(`${config.BACKEND_URL_OWN}/api/history`);
       console.log("🕒 Synced at", new Date().toLocaleString());

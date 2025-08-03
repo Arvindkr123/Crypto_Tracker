@@ -40,5 +40,5 @@ connectToDBHandler()
       console.error("❌ DB connection failed:", err);
     });
 
-// --- For Vercel (Serverless) ---
+
 export default app;
